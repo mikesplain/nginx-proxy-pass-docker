@@ -11,11 +11,13 @@ docker run -d -p 80:80 -e TARGET_SERVER=<proxy location> mikesplain/nginx-proxy-
 ```
 
 For example, want to proxy everything to google? WHY NOT?!
+
 ```
 docker run -d -p 80:80 -e TARGET_SERVER=google.com mikesplain/nginx-proxy-pass
 ```
 
 Or maybe another server on your network:
+
 ```
 docker run -d -p 80:80 -e TARGET_SERVER=192.168.8.15:8080 mikesplain/nginx-proxy-pass
 ```
