@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get -o Dpkg::Options::='--force-confold' --force-yes -fuy dist-upgrade
 
 RUN apt-get update && \
-    apt-get install nginx sed -yq
+    apt-get install nginx sed dnsutils -yq
 
 # apt clean
 RUN apt-get clean &&\
