@@ -4,6 +4,9 @@ MAINTAINER Mike Splain <mike.splain@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Default http protocol
+ENV HTTP_PROTOCOL http
+
 RUN apt-get update && \
     apt-get -o Dpkg::Options::='--force-confold' --force-yes -fuy dist-upgrade
 
