@@ -7,17 +7,17 @@ A number of great containers for reverse proxying to containers exist(I'm a fan 
 Simply run:
 
 ```
-docker run -d -p 80:80 -e TARGET_SERVER=<proxy location> mikesplain/nginx-proxy-pass
+docker run -d -p 80:80 -e TARGET_SERVER=<proxy location> ssuareza/nginx-proxy-pass
 ```
 
 For example, want to proxy everything to google? WHY NOT?!
 
 ```
-docker run -d -p 80:80 -e TARGET_SERVER=google.com mikesplain/nginx-proxy-pass
+docker run -d -p 80:80 -e TARGET_SERVER=https://google.com ssuareza/nginx-proxy-pass
 ```
 
 Or maybe another server on your network:
 
 ```
-docker run -d -p 80:80 -e TARGET_SERVER=192.168.8.15:8080 mikesplain/nginx-proxy-pass
+docker run -d -p 80:80 -e TARGET_SERVER=http://192.168.8.15:8080 ssuareza/nginx-proxy-pass
 ```
